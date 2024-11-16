@@ -1,7 +1,18 @@
-[{
-    "room_id":1,
-    "room_type":"Single",
-    "room_space":100,
-    "desc":"This is the reference description",
-    "facilities":[{"_id":1,"f_details":"hello"}]
-}]
+[
+    {
+        "room_id": 1,
+        "room_type": "Single",
+        "room_space": 100,
+        "desc": "This is the reference description",
+        "facilities": [
+            {
+                "_id": 1,
+                "f_det": "hello"
+            },
+            {
+                "id":2,
+                "f_det":"AC"
+            }
+        ]
+    }
+]

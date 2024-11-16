@@ -1,0 +1,9 @@
+/* placeList.css */
+.scrollbar-hide {
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+  

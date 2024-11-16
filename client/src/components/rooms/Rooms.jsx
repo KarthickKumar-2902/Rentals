@@ -1,33 +1,31 @@
-import react from "react"
+import { useState } from "react";
+import Filter from "../../utils/filter/Filter";
+import RoomList from "./RoomList";
+import Search from "../../utils/search/Search";
 
 const Room = () => {
-    return (
-        <>
-        <section className="roomListing">
-            <section className="filterSection">
-                <div className="filterHeading">
-                    <span>Filter</span>
-                </div>
-                <div className="propertyTypeFilter">
-                    <span>Property Types</span>
-                    <div className="ptInput">
-                        <div className="pt1">
-                            <input type="checkbox" name="Appartment" id="Appartment" for="Appartment"/>
-                            <label htmlFor="Appartment">Appartment</label>
-                        </div>
-                        <div className="pt2">
-                            <input type="checkbox" name="officeSpace" id="officeSpace" for="officeSpace"/>
-                            <label htmlFor="officeSpace">Office Space</label>
-                        </div>
-                        <div className="pt2">
-                            <input type="checkbox" name="Appartment" id="Appartment" for="Appartment"/>
-                            <label htmlFor="Appartment">Appartment</label>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </section>
-        </>
-    )
-}
-export default Room
+  const [inputValue, setInputValue] = useState(""); // State for the search input
+
+  return (
+    <>
+      <section className="p-5 bg-gray-100">
+        <Search inputValue={inputValue} setInputValue={setInputValue} />
+        <div className="flex w-full flex-col md:flex-row gap-5">
+          {/* Filter Section */}
+          <div className="md:w-1/3 w-full mt-5">
+            <Filter />
+          </div>
+
+          {/* Room Availability Section */}
+          <div className="w-full md:w-3/5 overflow-auto">
+            <div className="mt-5 p-5 bg-white rounded-lg shadow">
+              <RoomList searchQuery={inputValue} /> {/* Pass inputValue */}
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default Room;

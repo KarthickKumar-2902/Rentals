@@ -1,0 +1,49 @@
+/* PriceRange.css */
+.price-range-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.budget-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.price-slider {
+    margin-bottom: 20px;
+}
+
+.price-inputs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-inputs input {
+    width: 45%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .price-range-container {
+        padding: 10px;
+    }
+
+    .price-inputs input {
+        width: 40%;
+    }
+}

@@ -1,0 +1,188 @@
+.roomListing {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .filterSection {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .filterHeading {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .propertyTypeFilter,
+  .priceRangeFilter,
+  .sortByFilter,
+  .ratingsFilter {
+    margin-top: 20px;
+  }
+  
+  .propertyTypeFilter span,
+  .priceRangeFilter span,
+  .sortByFilter span,
+  .ratingsFilter span {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .ptInput,
+  .ratingOptions {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .ptOption,
+  .ratingOption {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .ptOption input,
+  .ratingOption input {
+    margin-right: 10px;
+  }
+  
+  .ptOption label,
+  .ratingOption label {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .ptOption input:checked + label,
+  .ratingOption input:checked + label {
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .priceRangeFilter {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .priceRangeFilter input[type="range"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .priceRangeValues {
+    display: flex;
+    justify-content: space-between;
+  }
+  .sortByFilter {
+    position: relative;
+    margin-top: 20px;
+  }
+  
+  .sortByFilter span {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .sortByFilter select {
+    width: 100%;
+    padding: 10px 40px 10px 10px; /* Add extra padding to accommodate custom arrow */
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    font-size: 14px;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    appearance: none; /* Remove default styling */
+    cursor: pointer;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    position: relative;
+  }
+  
+  .sortByFilter select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+    outline: none;
+  }
+  
+  .sortByFilter::after {
+    content: '▼'; /* Default arrow */
+    font-size: 14px;
+    color: #007bff;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(30%);
+    pointer-events: none; /* Prevents arrow from interfering with dropdown interactions */
+  }
+  
+  .sortByFilter select::-ms-expand {
+    display: none; /* Hide the default dropdown arrow in IE */
+  }
+  
+  .sortByFilter select {
+    padding-right: 40px; /* Space for the custom arrow */
+  }
+  
+  .sortByFilter select option {
+    padding: 10px;
+  }
+  
+
+  @media (max-width: 768px) {
+    .filterSection {
+      padding: 15px;
+    }
+  
+    .filterHeading {
+      font-size: 1.5rem;
+    }
+  
+    .propertyTypeFilter span,
+    .priceRangeFilter span,
+    .sortByFilter span,
+    .ratingsFilter span {
+      font-size: 0.875rem; /* Smaller font size for smaller screens */
+    }
+  
+    .rangeWrapper input[type="range"]::-webkit-slider-thumb,
+    .rangeWrapper input[type="range"]::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+    }
+  
+    .rangeDisplay {
+      font-size: 0.75rem; /* Smaller font size for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .roomListing{
+        display: none;
+    }
+    .propertyTypeFilter,
+    .priceRangeFilter,
+    .sortByFilter,
+    .ratingsFilter {
+      margin-top: 15px;
+    }
+  
+    .ptOption,
+    .ratingOption {
+      font-size: 0.75rem; /* Smaller font size for mobile */
+    }
+  
+    .sortByFilter select {
+      font-size: 0.75rem; /* Smaller font size for mobile */
+    }
+  }
